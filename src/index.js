@@ -40,7 +40,7 @@ const routing = (
     {/* nav rendered here to show on all pages (must be outside of Switch) */}
     <Navigation color={ "dark" } /> 
         <Switch>
-            <Route exact path='/' component={App} />
+            <Route exact path='/' component={Home} />
             <Route path='/route-1' component={RouteOne} />
             <Route path='/route-2' component={RouteTwo} />
             <Route component={ NotFound } />
