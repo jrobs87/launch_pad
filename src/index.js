@@ -1,6 +1,10 @@
 // Import React + ReactDOM
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Navigation from './components/Navigation'
+
+// import bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import Router
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -9,41 +13,38 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './index.css';
 
 // Import Components
-import App from './App';
+import Home from './Home';
 import RouteOne from './RouteOne';
 import RouteTwo from './RouteTwo';
+import NotFound from './NotFound';
 
+// inline js styles - nav
 const nav = {
     position: 'fixed',
-    top: 0,
-    textAlign: 'left'
+    bottom: '1em',
+    left: 0,
+    textAlign: 'left',
+    fontSize: '0.66em'
 }
 
+// inline js styles - link
 const link = {
     textDecoration: 'none',
-    background: 'lime',
-    color: 'black',
+    background: 'black',
+    color: 'white',
     padding: '0 8px 0 8px'
 }
 
-const routing = (
+const routing = (   
     <Router>
-        <Route exact path='/' component={ App } />
-        <Route path='/route-1' component={ RouteOne } />
-        <Route path='/route-2' component={ RouteTwo } />
-
-        {/* // Temp Nav */}
-        <div style={ nav }>
-            <ul>
-                <Link style={ link } to='/'>Home</Link>
-            </ul>
-            <ul>
-                <Link style={ link } to='/route-1'>Route One</Link>
-            </ul>
-            <ul>
-                <Link style={ link } to='/route-2'>Route Two</Link>
-            </ul>
-        </div>
+    {/* nav rendered here to show on all pages (must be outside of Switch) */}
+    <Navigation color={ "dark" } /> 
+        <Switch>
+            <Route exact path='/' component={App} />
+            <Route path='/route-1' component={RouteOne} />
+            <Route path='/route-2' component={RouteTwo} />
+            <Route component={ NotFound } />
+        </Switch>
     </Router>
 )
 

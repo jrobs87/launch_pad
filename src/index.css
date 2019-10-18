@@ -1,14 +1,19 @@
 /* google font import */
-@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+html {
+  font-size: 1.33em;
+}
 
 body {
   margin: 0;
-  font-family: 'Darker Grotesque', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: right;
   max-height: 100vh;
-  font-size: 26px;
+  /* padding: 1em;  */
+  /* overflow: hidden; */ 
 }
 
 code {
