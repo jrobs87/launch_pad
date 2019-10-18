@@ -34,7 +34,7 @@ const link = {
     <div>
     {/* replaced background color with prop from index.js */}
       <Navbar color={ props.color } style={ style } dark expand="md" >
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">LaunchPad</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
