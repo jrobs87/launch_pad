@@ -1,11 +1,19 @@
 import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 function NotFound() {
+    const style={
+        paddingTop: '10em'
+      }
     return (
-        <div>
-            <h1>404</h1>
-            <p>You have reached the singularity!</p>
-        </div>
+        <Container style={ style }>
+            <Row>
+                <Col>
+                    <h1>404</h1>
+                    <p>You have reached the singularity!</p>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
