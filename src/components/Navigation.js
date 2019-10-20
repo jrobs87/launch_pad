@@ -59,6 +59,11 @@ const Navigation = (props) => {
             </NavItem>
             <NavItem>
               <NavLink>
+                <Link to='/todo' style={link}>ToDo</Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
                 <Link to='/notfound' style={link}>404</Link>
               </NavLink>
             </NavItem>

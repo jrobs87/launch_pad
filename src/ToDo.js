@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 
-function NotFound() {
+function ToDo() {
     const style={
         paddingTop: '10em'
       }
@@ -10,12 +10,12 @@ function NotFound() {
         <Container style={ style }>
             <Row>
                 <Col>
-                    <h1>404</h1>
-                    <p>You have reached the singularity!</p>
+                    <h3>Loading Spinner</h3>
                 </Col>
             </Row>
         </Container>
+
     )
 }
 
-export default NotFound
+export default ToDo;

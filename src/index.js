@@ -17,6 +17,7 @@ import Home from './Home';
 import RouteOne from './RouteOne';
 import RouteTwo from './RouteTwo';
 import NotFound from './NotFound';
+import ToDo from './ToDo';
 
 // inline js styles - nav
 const nav = {
@@ -43,6 +44,7 @@ const routing = (
             <Route exact path='/' component={Home} />
             <Route path='/route-1' component={RouteOne} />
             <Route path='/route-2' component={RouteTwo} />
+            <Route path='/todo' component={ToDo} />
             <Route component={ NotFound } />
         </Switch>
     </Router>
