@@ -35,7 +35,7 @@ const Navigation = (props) => {
     <div>
       {/* replaced background color with prop from index.js */}
       <Navbar color={props.color} style={style} dark expand="md" >
-        <NavbarBrand href="/">
+        <NavbarBrand>
           <Link to='/' style={link}>LaunchPad</Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
