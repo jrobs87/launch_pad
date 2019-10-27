@@ -27,14 +27,14 @@ const Navigation = (props) => {
   const link = {
     textDecoration: 'none',
     background: 'none',
-    color: 'white',
+    color: 'black',
     padding: '0 8px 0 8px'
   }
 
   return (
     <div>
       {/* replaced background color with prop from index.js */}
-      <Navbar color={props.color} style={style} dark expand="md" >
+      <Navbar color={props.color} style={style} dark expand="md">
         <NavbarBrand>
           <Link to='/' style={link}>LaunchPad</Link>
         </NavbarBrand>
@@ -64,10 +64,15 @@ const Navigation = (props) => {
             </NavItem>
             <NavItem>
               <NavLink>
+                <Link to='/customNav' style={link}>Nav</Link>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
                 <Link to='/notfound' style={link}>404</Link>
               </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Testing
               </DropdownToggle>
@@ -83,7 +88,7 @@ const Navigation = (props) => {
                   Reset
                 </DropdownItem>
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown> */}
           </Nav>
         </Collapse>
       </Navbar>

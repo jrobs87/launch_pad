@@ -1,16 +1,15 @@
 // Import React + ReactDOM
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Navigation from './components/Navigation'
 
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Import Router
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 // Import style sheets
 import './index.css';
+
+// Import Router
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Import Components
 import Home from './Home';
@@ -18,33 +17,17 @@ import RouteOne from './RouteOne';
 import RouteTwo from './RouteTwo';
 import NotFound from './NotFound';
 import ToDo from './ToDo';
-
-// inline js styles - nav
-const nav = {
-    position: 'fixed',
-    bottom: '1em',
-    left: 0,
-    textAlign: 'left',
-    fontSize: '0.66em'
-}
-
-// inline js styles - link
-const link = {
-    textDecoration: 'none',
-    background: 'black',
-    color: 'white',
-    padding: '0 8px 0 8px'
-}
+import CustomNav from './components/NavCustom';
 
 const routing = (   
     <Router>
-    {/* nav rendered here to show on all pages (must be outside of Switch) */}
-    <Navigation color={ "dark" } /> 
+    <CustomNav />
         <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/route-1' component={RouteOne} />
-            <Route path='/route-2' component={RouteTwo} />
-            <Route path='/todo' component={ToDo} />
+            <Route exact path='/' component={ Home } />
+            <Route path='/route-1' component={ RouteOne } />
+            <Route path='/route-2' component={ RouteTwo } />
+            <Route path='/todo' component={ ToDo } />
+            <Route path='/customNav' component={ CustomNav } />
             <Route component={ NotFound } />
         </Switch>
     </Router>

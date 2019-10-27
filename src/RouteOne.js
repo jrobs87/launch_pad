@@ -10,7 +10,7 @@ function RouteOne() {
         <Container style={ style }> 
         <Row>
             <Col>
-            <h1>React Transition Group</h1>
+            <h1>Route One</h1>
             <p>Example of animation with React Transition Group.</p>
             </Col>
         </Row>

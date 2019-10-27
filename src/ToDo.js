@@ -10,7 +10,7 @@ function ToDo() {
         <Container style={ style }>
             <Row>
                 <Col>
-                    <h3>Loading Spinner</h3>
+                    <h1>ToDo List</h1>
                 </Col>
             </Row>
         </Container>
