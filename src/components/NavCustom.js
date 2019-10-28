@@ -20,122 +20,143 @@ class CustomNav extends Component {
     }
 
     render() {
-        const hidden = {
-            height: '100vh',
-            width: '14em',
-            top: 0,
-            right: '-14em',
-            position: 'fixed',
-            zIndex: 1000,
-            transitionDuration: '0.22s',
-            transitionTimingFunction: 'ease',
-            transitionDelay: '0.10s',
-            padding: '3em',
-            opacity: 0,
-            background: '#2E2F2F',
-            color: '#A599B5',
-            paddingTop: '6em' 
-        }
-
-        const visible = {
-            height: '100vh',
-            width: '14em',
-            top: 0,
-            right: 0,
-            position: 'fixed',
-            zIndex: 1000,
-            transitionDuration: '0.22s',
-            padding: '3em',
-            transitionTimingFunction: 'ease',
-            opacity: 0.96,
-            background: '#2E2F2F',
-            color: '#A599B5',
-            paddingTop: '6em' 
-        }
+        const navMenu = {
+            hidden: {
+                height: '100vh',
+                minWidth: '10em',
+                top: 0,
+                right: '-16em',
+                position: 'fixed',
+                zIndex: 1000,
+                transitionDuration: '0.44s',
+                transitionTimingFunction: 'cubic-bezier(.25,.1,.25,1)',
+                transitionDelay: '0.06s',
+                opacity: 0,
+                background: 'white',
+                color: '#A599B5',
+                padding: '6em 3em 0 3em',
+                // fontSize: '2em'
+            },
+            visible: {
+                height: '100vh',
+                minWidth: '10em',
+                top: 0,
+                right: 0,
+                position: 'fixed',
+                zIndex: 1000,
+                transitionDuration: '0.44s',
+                transitionTimingFunction: 'cubic-bezier(.25,.1,.25,1)',
+                transitionDelay: '0s',
+                opacity: 0.96,
+                background: '#6874E8',
+                color: '#A599B5',
+                padding: '6em 3em 0 3em',
+                // fontSize: '2em'
+            }
+        };
 
         const navIcon = {
-            // margin: '3em',
-            padding: 0,
-            background: 'none',
-            color: '#A599B5',
-            border: 'none',
-            position: 'fixed',
-            top: '2em',
-            right: '3em',
-            zIndex: 1500
+            hidden: {
+                padding: 0,
+                background: 'none',
+                color: '#2E2F2F',
+                border: 'none',
+                position: 'fixed',
+                top: '2em',
+                right: '3em',
+                zIndex: 1000,
+                transitionDuration: '0.22s',
+                transitionDelay: '0.12s'
+            },
+            active: {
+                padding: 0,
+                background: 'none',
+                color: 'white',
+                border: 'none',
+                position: 'fixed',
+                top: '2em',
+                right: '3em',
+                zIndex: 1500,
+                transitionDuration: '0.33s',
+                transitionDelay: '0s'
+            }
+
         }
 
         const navItem = {
             hidden: {
                 opacity: 0,
-                transitionDuration: '.11s',
+                transitionDuration: '0s',
                 transitionDelay: '0s',
-                color: '#CDDDDD',
+                transitionTimingFunction: 'cubic-bezier(.25,.1,.25,1)',
+                color: 'black',
                 textDecoration: 'none',
                 position: 'relative',
-                right: '-1em'
+                right: '-0.5em',
+                top: '0.25em'
             },
             active: {
                 transitionDuration: '.22s',
-                transitionDelay: '0.18s',
+                transitionDelay: '0.28s',
+                transitionTimingFunction: 'cubic-bezier(.25,.1,.25,1)',
                 opacity: 1,
-                color: '#CDDDDD',
+                color: 'white',
                 textDecoration: 'none',
                 position: 'relative',
-                right: '0em'
+                right: '0em',
+                top: '0em'
             }
         }
 
         const navModal = {
-        hidden: {
-            zIndex: -500,
-            height: '100vh',
-            width: '100%',
-            background: 'white',
-            opacity: 0,
-            position: 'fixed',
-            transitionDuration: '.11s',
-            transitionDelay: '0.22s',
-            top: 0
-        },
-        active: {
-            zIndex: 500,
-            opacity: 0.88,
-            background: 'white',
-            height: '100vh',
-            width: '100%',
-            position: 'fixed',
-            transitionDuration: '0s',
-            top: 0
+            hidden: {
+                zIndex: -500,
+                height: '100vh',
+                width: '100%',
+                background: 'white',
+                opacity: 0,
+                position: 'fixed',
+                transitionDuration: '.11s',
+                transitionDelay: '0.12s',
+            },
+            active: {
+                zIndex: 500,
+                opacity: 0.96,
+                background: 'white',
+                height: '100vh',
+                width: '100%',
+                position: 'fixed',
+                transitionDuration: '0.22s',
+                transitionDelay: '0s',
+                top: 0
+            }
         }
-    }
 
-        // let status = 'closed';
-        let navStyle = hidden;
+        // variable declarations for toggle styles
+        let navMenuStyle = navMenu.hidden;
         let nav = navItem.hidden;
         let navModalStyle = navModal.hidden;
+        let navIconStyle = navIcon.hidden;
 
+        // toggle styles based on state
         if (this.state.open === true) {
-            // status = 'open';
-            navStyle = visible;
+            navMenuStyle = navMenu.visible;
             nav = navItem.active;
             navModalStyle = navModal.active;
+            navIconStyle = navIcon.active;
         } else {
-            // status = 'closed';
-            navStyle = hidden;
+            navMenuStyle = navMenu.hidden;
             nav = navItem.hidden;
             navModalStyle = navModal.hidden;
+            navIconStyle = navIcon.hidden;
         }
 
         return (
             <div>
-                <Button onClick={this.toggle} style={navIcon}>
+                <Button onClick={this.toggle} style={navIconStyle} className='btn'>
                     MENU
                 </Button>
-                <nav style={navStyle}>
-                    {/* <h1>
-                        MENU
-                    </h1> */}
+                <nav style={navMenuStyle}>
                     <div>
                         <Link to='/' onClick={this.toggle} style={nav}>Home</Link>
                     </div>
@@ -149,18 +170,15 @@ class CustomNav extends Component {
                         <Link to='/todo' onClick={this.toggle} style={nav}>ToDo List</Link>
                     </div>
                     <div>
-                        <Link to='/customNav' onClick={this.toggle} style={nav}>Custom Nav</Link>
-                    </div>
-                    <div>
                         <Link to='/notfound' onClick={this.toggle} style={nav}>404 Page</Link>
                     </div>
                 </nav>
 
-                <div style={ navModalStyle }>
-                    
+                <div style={navModalStyle} onClick={this.toggle}>
+                    {/* nothing to see here */}
                 </div>
             </div>
-            
+
         )
     }
 }

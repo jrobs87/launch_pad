@@ -3,7 +3,9 @@ import { Container, Row, Col } from 'reactstrap';
 
 function NotFound() {
     const style={
-        paddingTop: '10em'
+        paddingTop: '10em',
+        width: '100%',
+        height: '100vh'
       }
 
     return (

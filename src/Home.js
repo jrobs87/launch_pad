@@ -6,12 +6,14 @@ import { Container, Row, Col } from 'reactstrap';
 function Home() {
 
   const style = {
-    paddingTop: '10em'
+    paddingTop: '10em',
+    width: '100%',
+    height: '100vh'
   }
 
   return (
-    <div className="App">
-      <Container fluid={false} style={style}>
+    <div className="App" style={style}>
+      <Container fluid={false} >
         <Row>
           <Col>
             <h1>App Entry Point</h1>
