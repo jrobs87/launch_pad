@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import Fade from 'react-reveal/Fade';
 // import cabin from './cabin.jpg';
 
 // primary app container component
@@ -16,8 +17,11 @@ function Home() {
       <Container fluid={false} >
         <Row>
           <Col>
-            <h1>App Entry Point</h1>
-            <p>React boilerplate including Router, reactstrap, and custom Components.</p>
+            <Fade left  duration={333} distance={'1em'} delay={ 666 }>
+              <h1 style={{ padding: '1em', background: 'black', color: 'white' }}>App Entry Point</h1>
+              <p>React boilerplate including Router, reactstrap, and custom Components.</p>
+            </Fade>
+
           </Col>
         </Row>
       </Container>

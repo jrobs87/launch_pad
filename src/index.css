@@ -1,5 +1,6 @@
 /* google font import */
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Jomolhari&display=swap');
 
 html {
   font-size: 1.33em;
@@ -7,10 +8,12 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  /* font-family: 'Quicksand', sans-serif; */
+  font-family: 'Jomolhari', serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: right;
+  text-align: center;
   max-height: 100vh;
   /* padding: 1em;  */
   /* overflow: hidden; */ 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import './NavCustom.css'
 
 class CustomNav extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class CustomNav extends Component {
                 transitionTimingFunction: 'cubic-bezier(.25,.1,.25,1)',
                 transitionDelay: '0.06s',
                 opacity: 0,
-                background: 'white',
+                // background: 'white',
                 color: '#A599B5',
                 padding: '6em 3em 0 3em',
                 // fontSize: '2em'
@@ -63,7 +64,7 @@ class CustomNav extends Component {
                 border: 'none',
                 position: 'fixed',
                 top: '2em',
-                right: '3em',
+                left: '3em',
                 zIndex: 1000,
                 transitionDuration: '0.22s',
                 transitionDelay: '0.12s'
@@ -171,6 +172,9 @@ class CustomNav extends Component {
                     </div>
                     <div>
                         <Link to='/notfound' onClick={this.toggle} style={nav}>404 Page</Link>
+                    </div>
+                    <div>
+                        <Link to='/customNavRF' onClick={this.toggle} style={nav}>CustomNavNF</Link>
                     </div>
                 </nav>
 

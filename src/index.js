@@ -18,16 +18,18 @@ import RouteTwo from './RouteTwo';
 import NotFound from './NotFound';
 import ToDo from './ToDo';
 import CustomNav from './components/NavCustom';
+import CustomNavNF from './NavCustomRefactor';
 
 const routing = (   
     <Router>
-    <CustomNav />
+    <CustomNavNF />
         <Switch>
             <Route exact path='/' component={ Home } />
             <Route path='/route-1' component={ RouteOne } />
             <Route path='/route-2' component={ RouteTwo } />
             <Route path='/todo' component={ ToDo } />
             <Route path='/customNav' component={ CustomNav } />
+            {/* <Route path='/customNavRF' component={ CustomNavNF } /> */}
             <Route component={ NotFound } />
         </Switch>
     </Router>
