@@ -34,31 +34,31 @@ class CustomNavNF extends Component {
                     <div className={this.state.active ? "link-active link" : "link"}>
                         {/* <div onClick={this.toggle}>x</div> */}
                         <br />
-                        <h4 style={{ color: 'white'}}>
+                        {/* <h4 style={{ color: 'white'}}>
                             React App
-                    </h4>
+                    </h4> */}
                         <nav >
                             <div>
-                                <Link to='/' onClick={this.toggle} class="link-menu">Home</Link>
+                                <Link to='/' onClick={this.toggle} className="link-menu">Home</Link>
                             </div>
                             <div>
-                                <Link to='/route-1' onClick={this.toggle} class="link-menu">Route One</Link>
+                                <Link to='/route-1' onClick={this.toggle} className="link-menu">Route One</Link>
                             </div>
                             <div>
-                                <Link to='/route-2' onClick={this.toggle} class="link-menu">Route Two</Link>
+                                <Link to='/route-2' onClick={this.toggle} className="link-menu">Route Two</Link>
                             </div>
                             <div>
-                                <Link to='/todo' onClick={this.toggle} class="link-menu">ToDo List</Link>
+                                <Link to='/todo' onClick={this.toggle} className="link-menu">ToDo List</Link>
                             </div>
                             <div>
-                                <Link to='/notfound' onClick={this.toggle} class="link-menu">404 Page</Link>
+                                <Link to='/notfound' onClick={this.toggle} className="link-menu">404 Page</Link>
                             </div>
                         </nav>
                     </div>
                 </nav>
 
                 <div onClick={this.toggle} className={ this.state.active ? "nav-icon-active nav-icon" : "nav-icon" }>
-                    menu
+                    Menu
                 </div>
             </div>
         )

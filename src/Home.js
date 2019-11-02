@@ -17,8 +17,8 @@ function Home() {
       <Container fluid={false} >
         <Row>
           <Col>
-            <Fade left  duration={333} distance={'1em'} delay={ 666 }>
-              <h1 style={{ padding: '1em', background: 'black', color: 'white' }}>App Entry Point</h1>
+            <Fade left  duration={333} distance={'1em'} delay={ 555 }>
+              <h1>App Entry Point</h1>
               <p>React boilerplate including Router, reactstrap, and custom Components.</p>
             </Fade>
 
