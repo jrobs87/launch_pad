@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amiri&display=swap');
 
 html {
-  font-size: 1.33em;
+  font-size: 1em;
 }
 
 body {
@@ -18,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   max-height: 100vh;
+  background: #FDFFFC;
   /* padding: 1em;  */
   /* overflow: hidden; */ 
 }
