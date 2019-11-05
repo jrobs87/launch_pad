@@ -13,7 +13,7 @@ function RouteOne() {
         <Container style={ style }> 
         <Row>
             <Col>
-            <Fade left  duration={222} distance={'1em'} delay={ 333 }>
+            <Fade duration={222} distance={'1em'} delay={ 222 }>
             <h1>Route One</h1>
             <p>Example of animation with React Transition Group.</p>
             </Fade>
