@@ -11,7 +11,8 @@ function Home() {
     width: '100%',
     height: '100vh',
     fontSize: '1.6em',
-    textAlign: 'left'
+    textAlign: 'left',
+    background: 'white'
   }
 
   return (

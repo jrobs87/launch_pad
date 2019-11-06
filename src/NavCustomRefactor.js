@@ -25,7 +25,7 @@ class CustomNavNF extends Component {
 
     render() {
         console.log(`Menu rendered with active state: ${this.state.active}.`);
-
+    
         return (
             <div>
                 <div className={this.state.active ? "nav-modal-active nav-modal" : "nav-modal"} onClick={this.toggle}>
@@ -35,24 +35,18 @@ class CustomNavNF extends Component {
 
                     <div className={this.state.active ? "link-active link" : "link"}>
                         <nav >
-                        
-                                    <Link to='/' onClick={this.toggle} className="link-menu">Home</Link>
-                          
-                                    <Link to='/route-1' onClick={this.toggle} className="link-menu">Route One</Link>
-                          
-                                    <Link to='/route-2' onClick={this.toggle} className="link-menu">Route Two</Link>
-                             
-                                    <Link to='/todo' onClick={this.toggle} className="link-menu">ToDo List</Link>
-                             
-                                    <Link to='/notfound' onClick={this.toggle} className="link-menu">404 Page</Link>
-                             
+                            <Link to='/' onClick={this.toggle} className="link-menu">Home</Link>
+                            <Link to='/route-1' onClick={this.toggle} className="link-menu">Route One</Link>
+                            <Link to='/route-2' onClick={this.toggle} className="link-menu">Route Two</Link>
+                            <Link to='/todo' onClick={this.toggle} className="link-menu">ToDo List</Link>
+                            <Link to='/notfound' onClick={this.toggle} className="link-menu">404 Page</Link>
                         </nav>
                     </div>
                 </nav>
 
                 <div onClick={this.toggle} className="nav-icon">
                     <div className="nav-icon-item">
-                        MENU
+                        {/* placeholder for menu icon */}
                     </div>
                 </div>
             </div>

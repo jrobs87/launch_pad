@@ -1,25 +1,32 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import {Fade} from 'react-reveal'
+import {Fade} from 'react-reveal';
+import bird from './jared-rice-ujNuUPN12z0-unsplash.jpg'
 
 function RouteOne() {
     const style={
         paddingTop: '10em',
         width: '100%',
-        height: '100vh'
+        height: '100vh',
+        background: `url(${bird})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'top',
+        color: 'white'
       }
 
     return (
-        <Container style={ style }> 
+        <Fade duration={333} delay={ 333 }>
+        <Container fluid style={ style }> 
         <Row>
             <Col>
-            <Fade duration={222} distance={'1em'} delay={ 222 }>
+           
             <h1>Route One</h1>
             <p>Example of animation with React Transition Group.</p>
-            </Fade>
+            
             </Col>
         </Row>
         </Container>
+        </Fade>
     )
 }
 

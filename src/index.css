@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   background: #FDFFFC;
   /* padding: 1em;  */
   /* overflow: hidden; */ 
@@ -35,3 +35,4 @@ code {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
+
