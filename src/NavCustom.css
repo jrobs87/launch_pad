@@ -3,7 +3,7 @@
     z-index: 500;
     top: 3em;
     right: 4em;
-    border: 2px solid #FED766;
+    border: 2px solid #F6511D;
     width: 4em;
     padding: 0.33em 0.33em 0.11em 0.33em;
     transition-duration: 0.33s;
@@ -14,7 +14,7 @@
 }
 
 .nav-icon-item:hover {
-    background: #FED766;
+    background: #F6511D;
     color:  #FDFFFC;
     /* opacity: 0.88; */
     cursor: pointer;
@@ -92,7 +92,7 @@
     opacity: 0.55;
     margin: .33em;
     padding: 0;
-    transition: 0.22s;
+    transition: 0.33s;
     display: block;
     /* line-height: 1em; */
 }
@@ -101,7 +101,7 @@
     text-decoration: none;
     color: #FDFFFC;
     opacity: 1;
-    transform: translateX(-0.3em) scale(1.02);
+    transform: translateX(-0.1em) scale(1.02);
 }
 
 ul {
